@@ -6,4 +6,4 @@ def post_list(request):
     return HttpResponse("<h1>Post List</h1>")
 
 def post_create(request):
-    return HttpResponse("<h1>Post List</h1>")
+    return HttpResponse("<h1>Create</h1>")
