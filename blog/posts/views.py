@@ -13,3 +13,6 @@ def post_detail(request):
 
 def post_update(request):
     return HttpResponse("<h1>Update</h1>")
+
+def post_delete(request):
+    return HttpResponse("<h1>Delete</h1>")
