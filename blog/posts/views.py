@@ -7,3 +7,6 @@ def post_list(request):
 
 def post_create(request):
     return HttpResponse("<h1>Create</h1>")
+
+def post_detail(request):
+    return HttpResponse("<h1>Detail</h1>")
