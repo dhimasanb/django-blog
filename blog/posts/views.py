@@ -5,7 +5,9 @@ from django.shortcuts import render
 from .models import Post
 
 def post_list(request): #list items
+    queryset = Post.objects.all()
     context = {
+        "object_list" : queryset,
         "title": "List"
     }
 

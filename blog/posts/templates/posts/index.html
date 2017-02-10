@@ -1,1 +1,11 @@
 <h1>{{ title }} Halaman Index</h1>
+
+{% for obj in object_list %}
+
+{{ obj.title }}<br>
+{{ obj.content }}<br>
+{{ obj.timestamp }}<br>
+{{ obj.updated }}<br>
+{{ obj.id }}<br>
+
+{% endfor %}
