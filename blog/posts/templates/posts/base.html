@@ -1,4 +1,6 @@
+{% load staticfiles %}
 <title>{% block head_title %} Django Blog {% endblock head_title %}</title>
+<link rel="stylesheet" href='{% static "css/base.css" %}'>
 <style media="screen">
   {% block style %}{% endblock style %}
 </style>
@@ -7,5 +9,5 @@
   {% block content %}
 
   {% endblock content %}
-
 </div>
+<img src='{% static "img/gambar.jpg" %}' alt="">
