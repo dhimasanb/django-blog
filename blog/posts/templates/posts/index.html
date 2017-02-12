@@ -2,7 +2,7 @@
 
 {% for obj in object_list %}
 
-{{ obj.title }}<br>
+<a href='{% url "posts:detail" id=obj.id %}'>{{ obj.title }}</a><br>
 {{ obj.content }}<br>
 {{ obj.timestamp }}<br>
 {{ obj.updated }}<br>
