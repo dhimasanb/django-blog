@@ -1,4 +1,7 @@
-<h1>{{ title }} Halaman Index</h1>
+{% extends "posts/base.html" %}
+{% block content %}
+
+<h1>{{ title }}</h1>
 
 {% for obj in object_list %}
 
@@ -9,3 +12,5 @@
 {{ obj.id }}<br>
 
 {% endfor %}
+
+{% endblock content %}

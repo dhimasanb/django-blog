@@ -22,7 +22,7 @@ def post_list(request): #list items
     #         "title": "List"
     #     }
 
-    return render(request, "posts/index.html", context)
+    return render(request, "posts/list.html", context)
 
 def post_create(request):
     form = PostForm(request.POST or None)
@@ -31,8 +31,6 @@ def post_create(request):
         instance.save()
         messages.success(request, "Successfully Created")
         return HttpResponseRedirect(instance.get_absolute_url())
-    else:
-        messages.error(request, "Not Successfully Created")
     # if request.method == "POST":
     #     print "title" + request.POST.get("content")
     #     print request.POST.get("title")

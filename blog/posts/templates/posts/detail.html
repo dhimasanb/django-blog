@@ -1,12 +1,15 @@
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{% if "html_safe" in message.tags %}
-    {{ message|safe }}{% else %}{{ message }}{% endif %}</li>
-    {% endfor %}
-</ul>
-{% endif %}
+{% extends "posts/base.html" %}
 
+{% block head_title %}{{ instance.title }} | {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+<style media="screen">
+  {% block style %}
+  h1 {
+    color: #777777;
+  }
+  {% endblock style %}
+</style>
 <h1>{{ title }}</h1>
 
 {{ instance.title }}<br>
@@ -14,3 +17,5 @@
 {{ instance.timestamp }}<br>
 {{ instance.updated }}<br>
 {{ instance.id }}<br>
+
+{% endblock content %}
