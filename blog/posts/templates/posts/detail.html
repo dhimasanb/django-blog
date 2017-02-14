@@ -11,6 +11,9 @@
   {% endblock style %}
 </style>
 <div class="col-sm-6 col-sm-offset-3">
+  {% if instance.image %}
+  <img src="{{ instance.image.url }}" class="img-responsive" alt="">
+  {% endif %}
   <h1>{{ title }}<small>{{ instance.timestamp }}</small></h1>
 
   {{ instance.title }}<br>
